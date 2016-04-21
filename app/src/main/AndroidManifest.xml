@@ -24,6 +24,11 @@
         <service android:name=".service.MyBindService">
 
         </service>
+        <service android:name=".service.MyServer">
+            <intent-filter>
+                <action android:name="com.example.asus.service.MyServer"></action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

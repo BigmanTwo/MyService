@@ -36,4 +36,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/but5"
         android:text="第二界面"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/but6"
+        android:text="服务机"/>
 </LinearLayout>

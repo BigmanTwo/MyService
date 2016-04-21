@@ -11,10 +11,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.asus.myservice.service.MyBindService;
+import com.example.asus.myservice.service.MyServer;
 import com.example.asus.myservice.service.MyStartService;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-        private Button mButton1,mButton2,mButton3,mButton4,mButton5;
+        private Button mButton1,mButton2,mButton3,mButton4,mButton5,mButton6;
     private MyBindService myBindService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButton4.setOnClickListener(this);
         mButton5=(Button)findViewById(R.id.but5);
         mButton5.setOnClickListener(this);
+        mButton6=(Button)findViewById(R.id.but6);
+        mButton6.setOnClickListener(this);
     }
 
     @Override
@@ -55,7 +58,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent=new Intent(MainActivity.this,MySecActivity.class);
                 startActivity(intent);
                 break;
-
+            case R.id.but6:
+                intent=new Intent(MainActivity.this, MyServer.class);
+                startService(intent);
+                break;
 
         }
     }
